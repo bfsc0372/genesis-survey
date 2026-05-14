@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>제네시스 광고사진 설문조사</title>
-<style>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제네시스 광고사진 설문조사</title>
+ <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; background: #f5f5f5; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
   .container { background: white; border-radius: 12px; padding: 40px; max-width: 600px; width: 100%; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; }
@@ -14,39 +14,41 @@
   .btn:hover { background: #4a148c; }
   .footer { margin-top: 30px; font-size: 12px; color: #999; }
   .loading { display: none; font-size: 16px; color: #6a1b9a; margin-top: 20px; }
-</style>
-</head>
-<body>
-<div class="container">
-  <h1>[제네시스 광고사진 설문]</h1>
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h1>[제네시스 광고사진 설문]</h1>
   <div class="description">
-    안녕하세요. 본 설문은 제네시스 자동차 광고사진에 대한 인식을 조사하기 위한 학술 연구 목적의 설문입니다.<br><br>
-    응답 소요시간: 약 10-15분<br>
-    모든 응답은 익명으로 처리되며, 연구 목적으로만 사용됩니다.<br><br>
-    감사합니다.<br>
-    상명대학교 사진영상미디어학과 조상철
-  </div>
-  <button class="btn" onclick="startSurvey()">설문 시작하기</button>
-  <div class="loading" id="loading">설문지로 이동 중...</div>
-  <div class="footer">본 연구는 상명대학교 연구윤리위원회의 승인을 받았습니다.</div>
-</div>
-<script>
+  안녕하세요. 본 설문은 제네시스 자동차 광고사진에 대한 인식을 조사하기 위한 학술 연구 목적의 설문입니다.<br><br>
+  응답 소요시간: 약 10-15분<br>
+  모든 응답은 익명으로 처리되며, 연구 목적으로만 사용됩니다.<br><br>
+  감사합니다.<br>
+  상명대학교 사진영상미디어학과 조상철
+  </div>div>
+  <button class="btn" onclick="startSurvey()">설문 시작하기</button>button>
+  <div class="loading" id="loading">설문지로 이동 중...</div>div>
+  <div class="footer">본 연구는 상명대학교 연구윤리위원회의 승인을 받았습니다.</div>div>
+  </div>div>
+ <script>
   var formURLs = [
-    'https://docs.google.com/forms/d/e/1FAIpQLScxW_be-WCAmndXjl0Pfo9_OEiHc0lgM1rPMLwc-bQyFlIs3Q/viewform',
-    'https://docs.google.com/forms/d/e/1FAIpQLSeS_NOHhpsFdehxYVMTvnOr1Yv3Uw7BriEpiQuojxDLgZ_2XA/viewform',
-    'https://docs.google.com/forms/d/e/1FAIpQLSfQM87x54SVgiI3DeTdqjvhqURvg1v8kbQOvEwndMRCz2ACXg/viewform',
-    'https://docs.google.com/forms/d/e/1FAIpQLScWlz1FeSmfBmqcrlSMOMkkyb-NgYkEzNIJLhXUE-uAN9JI-Q/viewform'
-  ];
+   'https://docs.google.com/forms/d/e/1FAIpQLScxW_be-WCAmndXjl0Pfo9_OEiHc0lgM1rPMLwc-bQyFlIs3Q/viewform',
+   'https://docs.google.com/forms/d/e/1FAIpQLSeS_NOHhpsFdehxYVMTvnOr1Yv3Uw7BriEpiQuojxDLgZ_2XA/viewform',
+   'https://docs.google.com/forms/d/e/1FAIpQLSfQM87x54SVgiI3DeTdqjvhqURvg1v8kbQOvEwndMRCz2ACXg/viewform',
+   'https://docs.google.com/forms/d/e/1FAIpQLScWlz1FeSmfBmqcrlSMOMkkyb-NgYkEzNIJLhXUE-uAN9JI-Q/viewform'
+   ];
   function startSurvey() {
-    var btn = document.querySelector('.btn');
-    var loading = document.getElementById('loading');
-    btn.style.display = 'none';
-    loading.style.display = 'block';
-    var counter = parseInt(localStorage.getItem('surveyCounter') || '0');
-    var index = counter % 4;
-    localStorage.setItem('surveyCounter', (counter + 1).toString());
-    setTimeout(function() { window.location.href = formURLs[index]; }, 800);
+     var btn = document.querySelector('.btn');
+     var loading = document.getElementById('loading');
+     btn.style.display = 'none';
+     loading.style.display = 'block';
+     var index = Math.floor(Math.random() * 4);
+     setTimeout(function() { window.location.href = formURLs[index]; }, 800);
   }
-</script>
-</body>
-</html>
+ </script>
+ </body>
+</html>html>
+ </script></h1>
+ </body>
+ </style></title>
+ </head>
